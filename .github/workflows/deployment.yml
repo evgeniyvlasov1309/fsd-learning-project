@@ -26,3 +26,4 @@ jobs:
         run: |
           npm install
           npm run build:prod
+          scp -r build ubuntu@13.53.130.120:/production
