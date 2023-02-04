@@ -36,8 +36,7 @@ jobs:
               HostName 13.53.130.120
               User ubuntu
               IdentityFile ~/.ssh/id_rsa-aws
-        run: |
-          ssh-keyscan 13.53.130.120 >> ~/.ssh/known_hosts
       - name: Deployment
         run: |
+          ssh-keyscan 13.53.130.120 >> ~/.ssh/known_hosts
           scp -r build aws:react-production/
