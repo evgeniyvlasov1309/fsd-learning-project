@@ -30,7 +30,13 @@ jobs:
         uses: shimataro/ssh-key-action@v2
         with:
           key: ${{ secrets.SSH_KEY }}
+          name: id_rsa-aws
           known_hosts: ${{ secrets.KNOWN_HOSTS }}
+          config: |
+            Host aws
+              HostName 13.53.130.120
+              User ubuntu
+              IdentityFile ~/.ssh/id_rsa-aws
       - name: Deployment
         run: |
-          scp -r -i {{ secrets.SSH_KEY }} build ubuntu@13.53.130.120:react-production/
+          scp -r build target:react-production/
