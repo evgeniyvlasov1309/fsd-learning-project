@@ -31,7 +31,7 @@ jobs:
         with:
           key: ${{ secrets.SSH_KEY }}
           name: id_rsa-aws
-          known_hosts: 13.53.130.120 ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBHmS1Nz3s7Xfxv4StyRVeseoNW1r6/yFfW40N+A4rFP4Q8E9cAtW/17uklpKrH3r0o3qMWSlOypJItnUrofqq40=
+          known_hosts: ${{ secrets.KNOWN_HOSTS }}
           config: |
             Host aws
               HostName 13.53.130.120
