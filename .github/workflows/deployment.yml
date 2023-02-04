@@ -28,5 +28,7 @@ jobs:
           npm run build:prod
       - name: Deployment
         run: |
+          mkdir -p ~/.ssh
+          touch ~/.ssh/known_hosts
           ssh-keyscan 13.53.130.120 >> ~/.ssh/known_hosts
           scp -r -i {{ secrets.SSH_KEY }} build ubuntu@13.53.130.120:/react-production
