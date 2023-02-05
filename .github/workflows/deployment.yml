@@ -39,4 +39,4 @@ jobs:
               IdentityFile ~/.ssh/id_rsa-aws
       - name: Deployment
         run: |
-          sudo scp -r build 13.53.130.120:/var/www/react-production
+          sudo scp -r build aws:react-production
