@@ -1,4 +1,4 @@
-name: NodeJS with Webpack
+name: Build and Deploy
 
 on:
   push:
@@ -39,4 +39,4 @@ jobs:
               IdentityFile ~/.ssh/id_rsa-aws
       - name: Deployment
         run: |
-          scp -r build aws:react-production
+          scp -r build aws:/var/www/react-production
