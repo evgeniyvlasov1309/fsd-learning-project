@@ -33,6 +33,5 @@ jobs:
           username: ubuntu
           key: ${{ secrets.SSH_KEY }}
           fingerprint: ${{ secrets.FINGERPRINT }}
-          port: 22
           source: "build"
           target: "/var/www/react-production"
