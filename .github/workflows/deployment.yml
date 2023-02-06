@@ -32,7 +32,7 @@ jobs:
           host: 13.53.130.120
           username: ubuntu
           key: ${{ secrets.SSH_KEY }}
-          known_hosts: ${{ secrets.KNOWN_HOSTS }}
+          fingerprint: ${{ secrets.KNOWN_HOSTS }}
           port: 22
           source: "build"
           target: "/var/www/react-production"
