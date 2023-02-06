@@ -31,10 +31,6 @@ jobs:
         with:
           key: ${{ secrets.SSH_KEY }}
           known_hosts: ${{ secrets.KNOWN_HOSTS }}
-          config: |
-            Host server
-              HostName 13.53.130.120
-              User ubuntu
       - name: Deployment
         run: |
-          sudo scp -r build/ server:/var/www/react-production
+          sudo scp -r build/ ubuntu@13.53.130.120:/var/www/react-production
