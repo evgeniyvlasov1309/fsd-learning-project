@@ -40,8 +40,6 @@ jobs:
       - name: Generate auth hosts
         run: ssh-keyscan -H ${{ env.SERVER_HOST }} >> ~/.ssh/known_hosts
       # Deploy
-      - run: scp -r build/ ${{ env.SERVER_USER }}@${{ env.SERVER_HOST }}:${{ env.SERVER_PATH }}
-      # # Deploy
-      # - name: Deployment
-      #   run: |
-      #     sudo scp -r build/ ${{ env.SERVER_USER }}@${{ env.SERVER_HOST }}:${{ env.SERVER_PATH }}
+      - name: Deployment
+        run: |
+          scp -r build/ ${{ env.SERVER_USER }}@${{ env.SERVER_HOST }}:${{ env.SERVER_PATH }}
