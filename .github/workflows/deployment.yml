@@ -42,4 +42,5 @@ jobs:
       # Deploy
       - name: Deployment
         run: |
-          scp -r ./* ${{ env.SERVER_USER }}@${{ env.SERVER_HOST }}:${{ env.SERVER_PATH }}
+          scp -r build ${{ env.SERVER_USER }}@${{ env.SERVER_HOST }}:${{ env.SERVER_PATH }}
+          scp -r extractedTranslations ${{ env.SERVER_USER }}@${{ env.SERVER_HOST }}:${{ env.SERVER_PATH }}
