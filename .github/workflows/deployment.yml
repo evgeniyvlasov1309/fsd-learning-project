@@ -27,9 +27,10 @@ jobs:
           set -eu
           mkdir "$HOME/.ssh"
           echo "${{ secrets.SSH_KEY }}" > "$HOME/.ssh/key"
+          echo "${{ secrets.KNOWN_HOSTS }}" > "$HOME/.ssh/known_hosts"
           chmod 600 "$HOME/.ssh/key"
           npm ci
           npm run build:prod
       - name: Deployment
         run: |
-          sudo scp -r build/ ssh -i $HOME/.ssh/key -o StrictHostKeyChecking=no ubuntu@13.53.130.120:/var/www/react-production
+          sudo scp -r build/ ssh -i $HOME/.ssh/key ubuntu@13.53.130.120:/var/www/react-production
