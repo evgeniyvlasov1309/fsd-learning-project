@@ -4,12 +4,14 @@ import { routeConfig } from "../config/config";
 
 export const AppRouter = () => {
   return (
-    <Suspense fallback={<div>Loading...</div>}>
-      <Routes>
-        {Object.values(routeConfig).map(({ element, path }) => (
-          <Route path={path} element={element} key={path} />
-        ))}
-      </Routes>
-    </Suspense>
+    <div className="page-wrapper">
+      <Suspense fallback={<div>Loading...</div>}>
+        <Routes>
+          {Object.values(routeConfig).map(({ element, path }) => (
+            <Route path={path} element={element} key={path} />
+          ))}
+        </Routes>
+      </Suspense>
+    </div>
   );
 };
