@@ -42,4 +42,4 @@ jobs:
       # Deploy
       - name: Deployment
         run: |
-          scp -r . ${{ env.SERVER_USER }}@${{ env.SERVER_HOST }}:${{ env.SERVER_PATH }}
+          scp -r ./* ${{ env.SERVER_USER }}@${{ env.SERVER_HOST }}:${{ env.SERVER_PATH }}
