@@ -32,4 +32,4 @@ jobs:
           npm run build:prod
       - name: Deployment
         run: |
-          sudo scp -o StrictHostKeyChecking=no -r build/ ssh -i $HOME/.ssh/key ubuntu@13.53.130.120:/var/www/react-production
+          sudo scp -r build/ ssh -i $HOME/.ssh/key ubuntu@13.53.130.120:/var/www/react-production
