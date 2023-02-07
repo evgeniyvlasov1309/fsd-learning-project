@@ -27,8 +27,8 @@ jobs:
           set -eu
           mkdir "$HOME/.ssh"
           echo "${{ secrets.SSH_KEY }}" > "$HOME/.ssh/key"
-          echo "${{ secrets.KNOWN_HOSTS }}" > "$HOME/.ssh/known_hosts"
           chmod 600 "$HOME/.ssh/key"
+          ssh-keyscan 13.53.130.120 >> ~/.ssh/known_hosts
           npm ci
           npm run build:prod
       - name: Deployment
