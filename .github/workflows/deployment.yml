@@ -27,10 +27,12 @@ jobs:
           npm install
           npm run build:prod
       - name: Connection setup
-        uses: shimataro/ssh-key-action@v2.5.0
+        uses: garygrossgarten/github-action-ssh@release
         with:
-          key: ${{ secrets.SSH_KEY }}
-          known_hosts: ${{ secrets.KNOWN_HOSTS }}
+          host: 13.53.130.120
+          username: ubuntu
+          passphrase: ${{ secrets.PASSPHRASE }}
+          privateKey: ${{ secrets.SSH_KEY}}
       - name: Deployment
         run: |
           sudo scp -r build/ ubuntu@13.53.130.120:/var/www/react-production
