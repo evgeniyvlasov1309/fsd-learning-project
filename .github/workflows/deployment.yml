@@ -24,15 +24,12 @@ jobs:
 
       - name: Build
         run: |
-          npm install
+          set -eu
+          mkdir "$HOME/.ssh"
+          echo "${{ secrets.SSH_KEY }}" > "$HOME/.ssh/key"
+          chmod 600 "$HOME/.ssh/key"
+          npm ci
           npm run build:prod
-      - name: Connection setup
-        uses: garygrossgarten/github-action-ssh@release
-        with:
-          host: 13.53.130.120
-          username: ubuntu
-          passphrase: ${{ secrets.PASSPHRASE }}
-          privateKey: ${{ secrets.SSH_KEY}}
       - name: Deployment
         run: |
-          sudo scp -r build/ ubuntu@13.53.130.120:/var/www/react-production
+          sudo scp -r build/ "ssh -i $HOME/.ssh/key -o StrictHostKeyChecking=no" ubuntu@13.53.130.120:/var/www/react-production
