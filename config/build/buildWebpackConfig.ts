@@ -13,7 +13,7 @@ export function buildWebpackConfig(
         mode,
         entry: paths.entry,
         output: {
-            filename: "[name].[contenthash].js",
+            filename: "js/[name].[contenthash].js",
             path: paths.build,
             clean: true,
         },
