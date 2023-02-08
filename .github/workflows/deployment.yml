@@ -27,12 +27,11 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
       - name: Installing packages
-        npm ci
+        run: npm ci
       - name: Running tests
-        npm run unit
-      - name: Build
-        run: |
-          npm run build:prod
+        run: npm run unit
+      - name: Building
+        run: npm run build:prod
       - name: Deployment
         uses: shimataro/ssh-key-action@v2.3.1
         with:
