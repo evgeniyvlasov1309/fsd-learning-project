@@ -1,10 +1,13 @@
 {
-  "editor.codeActionsOnSave": {
-    "source.fixAll": true,
-    "source.organizeImports": true
-  },
-  "typescript.tsdk": "node_modules\\typescript\\lib",
-  "i18n-ally.localesPaths": ["public/locales", "src/shared/config/i18n"],
-  "stylelint.enable": true,
-  "stylelint.validate": ["css", "scss"]
+    "editor.codeActionsOnSave": {
+        "source.fixAll": true,
+        "source.organizeImports": true
+    },
+    "editor.formatOnSave": true,
+    "typescript.tsdk": "node_modules\\typescript\\lib",
+    "i18n-ally.localesPaths": ["public/locales", "src/shared/config/i18n"],
+    "stylelint.enable": true,
+    "stylelint.validate": ["css", "scss"],
+    "react-i18n.i18nPaths": "build\\locales,public\\locales,src\\shared\\config\\i18n",
+    "i18n-ally.keystyle": "flat"
 }

@@ -8,6 +8,7 @@ module.exports = {
         "plugin:react/recommended",
         "airbnb",
         "plugin:i18next/recommended",
+        "prettier",
     ],
     parser: "@typescript-eslint/parser",
     parserOptions: {
@@ -37,9 +38,9 @@ module.exports = {
         "import/extensions": "off",
         "import/no-extraneous-dependencies": "off",
         "no-underscore-dangle": "off",
-        quotes: ["error", "double", { avoidEscape: true }],
         "i18next/no-literal-string": ["error", { markupOnly: true }],
         "max-len": ["error", { ignoreComments: true }],
+        "no-tabs": "off",
     },
     globals: {
         __IS_DEV__: true,
