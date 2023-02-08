@@ -26,21 +26,18 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node-version }}
-
+      - name: Installing packages
+        npm ci
+      - name: Running tests
+        npm run unit
       - name: Build
         run: |
-          npm ci
-          npm run unit
           npm run build:prod
-      # Install ssh key
-      - name: Install SSH Key
+      - name: Deployment
         uses: shimataro/ssh-key-action@v2.3.1
         with:
           key: "${{ secrets.SSH_PRIVATE_KEY }}"
           known_hosts: "just-a-placeholder-so-we-dont-get-errors"
-      - name: Generate auth hosts
         run: ssh-keyscan -H ${{ env.SERVER_HOST }} >> ~/.ssh/known_hosts
-      # Deploy
-      - name: Deployment
         run: |
           scp -r build/* ${{ env.SERVER_USER }}@${{ env.SERVER_HOST }}:${{ env.SERVER_PATH }}
