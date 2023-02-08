@@ -1,9 +1,8 @@
 {
   "editor.codeActionsOnSave": {
-	"source.fixAll": true,
+    "source.fixAll": true,
     "source.organizeImports": true
   },
-  "eslint.format.enable": true,
   "typescript.tsdk": "node_modules\\typescript\\lib",
   "i18n-ally.localesPaths": ["public/locales", "src/shared/config/i18n"],
   "stylelint.enable": true,

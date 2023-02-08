@@ -1,3 +1,4 @@
+import { AppRoutes } from "app/providers/router";
 import { FC } from "react";
 import { useTranslation } from "react-i18next";
 import { classNames } from "shared/lib/classNames";
@@ -15,10 +16,14 @@ export const Navbar: FC<NavbarProps> = (props) => {
     return (
         <div className={classNames(cls.navbar, {}, [className])}>
             <div className={cls.links}>
-                <AppLink theme={AppLinkTheme.SECONDARY} to="/" className={cls.mainLink}>
+                <AppLink
+                    theme={AppLinkTheme.SECONDARY}
+                    to={AppRoutes.MAIN}
+                    className={cls.mainLink}
+                >
                     {t("Главная")}
                 </AppLink>
-                <AppLink theme={AppLinkTheme.SECONDARY} to="/about">
+                <AppLink theme={AppLinkTheme.SECONDARY} to={AppRoutes.ABOUT}>
                     {t("О сайте")}
                 </AppLink>
             </div>

@@ -30,6 +30,7 @@ jobs:
       - name: Build
         run: |
           npm ci
+          npm run unit
           npm run build:prod
       # Install ssh key
       - name: Install SSH Key
