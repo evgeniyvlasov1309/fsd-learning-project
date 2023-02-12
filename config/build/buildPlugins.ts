@@ -24,6 +24,8 @@ export function buildPlugins({
         new CopyPlugin({
             patterns: [{ from: paths.locales, to: `${paths.build}/locales` }],
         }),
-        ...[isDev && new ReactRefreshWebpackPlugin()].filter(Boolean),
+        ...[isDev && new ReactRefreshWebpackPlugin({ overlay: false })].filter(
+            Boolean
+        ),
     ];
 }

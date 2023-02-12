@@ -1,3 +1,4 @@
+import { BugButton } from "app/providers/ErrorBoundry";
 import { useTranslation } from "react-i18next";
 
 export default function MainPage() {
@@ -5,6 +6,7 @@ export default function MainPage() {
 
     return (
         <div>
+            <BugButton />
             <div>{t("main-page")}</div>
         </div>
     );

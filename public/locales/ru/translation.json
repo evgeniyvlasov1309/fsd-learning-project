@@ -1,7 +1,10 @@
 {
-    "translate": "Перевод",
-    "main-menu-item": "Главная",
-    "about-us-menu-item": "О сайте",
-    "language": "Русский",
-    "page-not-found": "Страница не найдена"
+  "translate": "Перевод",
+  "main-menu-item": "Главная",
+  "about-us-menu-item": "О сайте",
+  "language": "Русский",
+  "page-not-found": "Страница не найдена",
+  "page-error": "Произошла непредвиденная ошибка",
+  "reload-btn": "Обновить страницу",
+  "throw-error": "Инициировать ошибку"
 }

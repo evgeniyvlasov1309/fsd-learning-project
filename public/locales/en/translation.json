@@ -1,7 +1,10 @@
 {
-    "translate": "Translate",
-    "main-menu-item": "Home",
-    "about-us-menu-item": "About us",
-    "language": "English",
-    "page-not-found": "Page not found"
+  "translate": "Translate",
+  "main-menu-item": "Home",
+  "about-us-menu-item": "About us",
+  "language": "English",
+  "page-not-found": "Page not found",
+  "page-error": "Unexpected error occured",
+  "reload-btn": "Reload page",
+  "throw-error": "Throw error"
 }
