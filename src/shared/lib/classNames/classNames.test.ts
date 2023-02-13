@@ -16,7 +16,7 @@ describe("classNames", () => {
             classNames("testClass", { hovered: true, scrollable: true }, [
                 "test1",
                 "test2",
-            ]),
+            ])
         ).toBe(expected);
     });
 
@@ -26,7 +26,7 @@ describe("classNames", () => {
             classNames("testClass", { hovered: true, scrollable: false }, [
                 "test1",
                 "test2",
-            ]),
+            ])
         ).toBe(expected);
     });
 
@@ -36,7 +36,7 @@ describe("classNames", () => {
             classNames("testClass", { hovered: true, scrollable: undefined }, [
                 "test1",
                 "test2",
-            ]),
+            ])
         ).toBe(expected);
     });
 });
