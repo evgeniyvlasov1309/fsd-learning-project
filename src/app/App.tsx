@@ -3,6 +3,7 @@ import { Suspense } from "react";
 import { classNames } from "shared/lib/classNames";
 import { Navbar } from "widgets/Navbar";
 import { Sidebar } from "widgets/Sidebar";
+import { ErrorBoundary } from "./providers/ErrorBoundry";
 import { AppRouter } from "./providers/router";
 import "./styles/index.scss";
 
@@ -11,13 +12,15 @@ export default function App() {
 
     return (
         <div className={classNames("app", {}, [theme])}>
-            <Suspense fallback="">
-                <Navbar />
-                <div className="content-page">
-                    <Sidebar />
-                    <AppRouter />
-                </div>
-            </Suspense>
+            <ErrorBoundary>
+                <Suspense fallback="">
+                    <Navbar />
+                    <div className="content-page">
+                        <Sidebar />
+                        <AppRouter />
+                    </div>
+                </Suspense>
+            </ErrorBoundary>
         </div>
     );
 }
