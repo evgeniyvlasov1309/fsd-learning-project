@@ -10,7 +10,7 @@ export function buildPlugins({
     paths,
     isDev,
 }: BuildOptions): webpack.WebpackPluginInstance[] {
-    return [
+    const plugins = [
         new HtmlWebpackPlugin({
             template: paths.html,
         }),
@@ -25,9 +25,14 @@ export function buildPlugins({
         new CopyPlugin({
             patterns: [{ from: paths.locales, to: `${paths.build}/locales` }],
         }),
-        ...[isDev && new ReactRefreshWebpackPlugin({ overlay: false })].filter(
-            Boolean
-        ),
-        new BundleAnalyzerPlugin({ openAnalyzer: false }),
     ];
+
+    if (isDev) {
+        plugins.push(
+            new ReactRefreshWebpackPlugin({ overlay: false }),
+            new BundleAnalyzerPlugin({ openAnalyzer: false })
+        );
+    }
+
+    return plugins;
 }
