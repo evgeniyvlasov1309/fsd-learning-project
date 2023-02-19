@@ -1,5 +1,4 @@
 import { FC } from "react";
-import { useTranslation } from "react-i18next";
 import { classNames } from "shared/lib/classNames";
 import cls from "./Navbar.module.scss";
 
@@ -9,11 +8,6 @@ interface NavbarProps {
 
 export const Navbar: FC<NavbarProps> = (props) => {
     const { className } = props;
-    const { t } = useTranslation();
 
-    return (
-        <div className={classNames(cls.navbar, {}, [className])}>
-            <div className={cls.links}>{/*  */}</div>
-        </div>
-    );
+    return <div className={classNames(cls.navbar, {}, [className])} />;
 };
