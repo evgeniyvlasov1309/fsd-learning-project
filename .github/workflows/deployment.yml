@@ -7,7 +7,7 @@ on:
     branches: ["master"]
 
 env:
-  SERVER_HOST: 13.53.130.120
+  SERVER_HOST: 13.51.92.34
   SERVER_USER: ubuntu
   SERVER_PATH: /var/www/react-production
 
