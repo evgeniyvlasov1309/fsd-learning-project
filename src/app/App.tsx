@@ -15,6 +15,7 @@ export default function App() {
             <ErrorBoundary>
                 <Suspense fallback="">
                     <Navbar />
+
                     <div className="content-page">
                         <Sidebar />
                         <AppRouter />
