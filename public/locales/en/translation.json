@@ -7,5 +7,7 @@
   "page-error": "Unexpected error occured",
   "reload-btn": "Reload page",
   "throw-error": "Throw error",
-  "short-lang": "En"
+  "short-lang": "En",
+  "increment": "Increase",
+  "decrement": "Decrease"
 }

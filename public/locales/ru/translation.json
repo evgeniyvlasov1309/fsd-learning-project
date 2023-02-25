@@ -7,5 +7,7 @@
   "page-error": "Произошла непредвиденная ошибка",
   "reload-btn": "Обновить страницу",
   "throw-error": "Инициировать ошибку",
-  "short-lang": "Ru"
+  "short-lang": "Ru",
+  "increment": "Увеличить",
+  "decrement": "Уменьшить"
 }
