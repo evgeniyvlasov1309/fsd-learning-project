@@ -9,5 +9,8 @@
   "throw-error": "Throw error",
   "short-lang": "En",
   "increment": "Increase",
-  "decrement": "Decrease"
+  "decrement": "Decrease",
+  "login": "Login",
+  "enter-username": "Enter username",
+  "enter-password": "Enter password"
 }

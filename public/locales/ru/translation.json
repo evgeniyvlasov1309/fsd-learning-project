@@ -9,5 +9,8 @@
   "throw-error": "Инициировать ошибку",
   "short-lang": "Ru",
   "increment": "Увеличить",
-  "decrement": "Уменьшить"
+  "decrement": "Уменьшить",
+  "login": "Войти",
+  "enter-username": "Введите юзернейм",
+  "enter-password": "Введите пароль"
 }
