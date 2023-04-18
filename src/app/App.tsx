@@ -1,4 +1,6 @@
-import { Suspense } from "react";
+import { userActions } from "entities/User";
+import { Suspense, useEffect } from "react";
+import { useDispatch } from "react-redux";
 import { classNames } from "shared/lib/classNames";
 import { Navbar } from "widgets/Navbar";
 import { Sidebar } from "widgets/Sidebar";
@@ -7,6 +9,12 @@ import { AppRouter } from "./providers/router";
 import "./styles/index.scss";
 
 export default function App() {
+    const dispatch = useDispatch();
+
+    useEffect(() => {
+        dispatch(userActions.initAuthData());
+    }, [dispatch]);
+
     return (
         <div className={classNames("app", {}, [])}>
             <ErrorBoundary>
