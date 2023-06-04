@@ -2,24 +2,36 @@ import { FC, memo, useCallback } from "react";
 import { useTranslation } from "react-i18next";
 import { useDispatch, useSelector } from "react-redux";
 import { classNames } from "shared/lib/classNames";
+import { ReducersList, useDynamicModuleLoader } from "shared/lib/hooks/useDynamicModuleLoader.ts/useDynamicModuleLoader";
 import { Button, ButtonTheme } from "shared/ui/Button";
 import { Input } from "shared/ui/Input/ui/Input";
 import { Text } from "shared/ui/Text";
 import { TextTheme } from "shared/ui/Text/ui/Text";
-import { getLoginState } from "../../model/selectors/getLoginState/getLoginState";
+import { getLoginError } from "../../model/selectors/getLoginError/getLoginError";
+import { getLoginIsLoading } from "../../model/selectors/getLoginIsLoading/getLoginIsLoading";
+import { getLoginPassword } from "../../model/selectors/getLoginPassword/getLoginPassword";
+import { getLoginUsername } from "../../model/selectors/getLoginUsername/getLoginUsername";
 import { loginByUsername } from "../../model/services/loginByUsername/loginByUsername";
-import { loginActions } from "../../model/slice/loginSlice";
+import { loginActions, loginReducer } from "../../model/slice/loginSlice";
 import cls from "./LoginForm.module.scss";
 
-interface LoginFormProps {
+export interface LoginFormProps {
     className?: string;
 }
 
-export const LoginForm: FC<LoginFormProps> = memo((props: LoginFormProps) => {
+const initialReducers: ReducersList = {
+    loginForm: loginReducer
+};
+
+const LoginForm: FC<LoginFormProps> = memo((props: LoginFormProps) => {
     const { className } = props;
     const { t } = useTranslation();
     const dispatch = useDispatch();
-    const { username, password, isLoading, error } = useSelector(getLoginState);
+    const username = useSelector(getLoginUsername);
+    const password = useSelector(getLoginPassword);
+    const isLoading = useSelector(getLoginIsLoading);
+    const error = useSelector(getLoginError);
+    useDynamicModuleLoader(initialReducers);
 
     const onChangeUsername = useCallback(
         (value: string) => {
@@ -70,3 +82,5 @@ export const LoginForm: FC<LoginFormProps> = memo((props: LoginFormProps) => {
         </div>
     );
 });
+
+export default LoginForm;
