@@ -2,6 +2,7 @@
   "translate": "Перевод",
   "main-menu-item": "Главная",
   "about-us-menu-item": "О сайте",
+  "profile-menu-item": "Профиль",
   "language": "Русский",
   "page-not-found": "Страница не найдена",
   "page-error": "Произошла непредвиденная ошибка",
@@ -14,5 +15,6 @@
   "enter-username": "Введите юзернейм",
   "enter-password": "Введите пароль",
   "auth-form": "Форма авторизации",
-  "incorrect-auth": "Неверный логин или пароль"
+  "incorrect-auth": "Неверный логин или пароль",
+  "profile-page": "Профиль"
 }

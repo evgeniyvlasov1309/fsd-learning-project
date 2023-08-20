@@ -25,5 +25,14 @@
             "password": "123"
         }
     ],
-    "profile": { "name": "typicode" }
+    "profile": {
+        "first": "Evgenii",
+        "lastname": "Vlasov",
+        "age": "27",
+        "currency": "RUB",
+        "country": "Russia",
+        "city": "Tyumen",
+        "username": "admin",
+        "avatar": "https://cdn.pixabay.com/photo/2013/07/13/10/07/man-156584_1280.png"
+    }
 }

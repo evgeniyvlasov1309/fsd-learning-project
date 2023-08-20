@@ -2,6 +2,7 @@
   "translate": "Translate",
   "main-menu-item": "Home",
   "about-us-menu-item": "About us",
+  "profile-menu-item": "Profile",
   "language": "English",
   "page-not-found": "Page not found",
   "page-error": "Unexpected error occured",
@@ -14,5 +15,6 @@
   "enter-username": "Enter username",
   "enter-password": "Enter password",
   "auth-form": "Authorization form",
-  "incorrect-auth": "Login or password is incorrect"
+  "incorrect-auth": "Login or password is incorrect",
+  "profile-page": "Profile"
 }

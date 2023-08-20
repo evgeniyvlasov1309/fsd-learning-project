@@ -22,8 +22,10 @@ export function createReduxStore(
         preloadedState: initialState,
     });
 
-    //@ts-ignore
+    // @ts-ignore
     store.reducerManager = reducerManager;
 
     return store;
 }
+
+export type AppDispatch = ReturnType<typeof createReduxStore>['dispatch'];
