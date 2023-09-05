@@ -16,5 +16,6 @@
   "enter-password": "Введите пароль",
   "auth-form": "Форма авторизации",
   "incorrect-auth": "Неверный логин или пароль",
-  "profile-page": "Профиль"
+  "profile-page": "Профиль",
+  "logout": "Выйти"
 }

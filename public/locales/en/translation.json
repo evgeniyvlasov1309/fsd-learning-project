@@ -16,5 +16,6 @@
   "enter-password": "Enter password",
   "auth-form": "Authorization form",
   "incorrect-auth": "Login or password is incorrect",
-  "profile-page": "Profile"
+  "profile-page": "Profile",
+  "logout": "Logout"
 }

@@ -1,5 +1,7 @@
+import { useTheme } from "app/providers/Theme";
 import React, {
     FC,
+    MutableRefObject,
     ReactNode,
     useCallback,
     useEffect,
@@ -24,7 +26,10 @@ export const Modal: FC<ModalProps> = (props) => {
     const { className, children, isOpen, onClose, lazy } = props;
     const [isClosing, setIsClosing] = useState(false);
     const [isMounted, setIsMounted] = useState(false);
-    const timerRef = useRef<ReturnType<typeof setTimeout>>();
+    const timerRef = useRef() as MutableRefObject<
+        ReturnType<typeof setTimeout>
+    >;
+    const { theme } = useTheme();
 
     useEffect(() => {
         if (isOpen) {
@@ -79,7 +84,7 @@ export const Modal: FC<ModalProps> = (props) => {
                         [cls.opened]: isOpen,
                         [cls.isClosing]: isClosing,
                     },
-                    [className]
+                    [className, theme, "app_modal"]
                 )}
             >
                 <div className={cls.overlay} onClick={closeHandler}>

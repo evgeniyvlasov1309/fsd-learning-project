@@ -3,7 +3,7 @@ import {
     Theme,
     ThemeContext,
 } from "app/providers/Theme/lib/ThemeContext";
-import { useContext, useEffect } from "react";
+import { useContext } from "react";
 
 interface UseThemeResult {
     theme: Theme;
@@ -13,16 +13,11 @@ interface UseThemeResult {
 export function useTheme(): UseThemeResult {
     const { theme, setTheme } = useContext(ThemeContext);
 
-    useEffect(() => {
-        // @ts-ignore
-        document.body.classList = theme;
-        localStorage.setItem(LOCAL_STORAGE_THEME_KEY, theme);
-    }, [theme]);
-
     function toggleTheme() {
         const newTheme = theme === Theme.LIGHT ? Theme.DARK : Theme.LIGHT;
-        setTheme(newTheme);
+        setTheme?.(newTheme);
+        localStorage.setItem(LOCAL_STORAGE_THEME_KEY, newTheme);
     }
 
-    return { theme, toggleTheme };
+    return { theme: theme || Theme.LIGHT, toggleTheme };
 }
