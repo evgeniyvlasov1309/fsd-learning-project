@@ -7,6 +7,7 @@ import React, {
     useState,
 } from "react";
 import { classNames } from "shared/lib/classNames";
+import { Mods } from "shared/lib/classNames/classNames";
 import cls from "./Input.module.scss";
 
 type HTMLInputProps = Omit<
@@ -16,8 +17,9 @@ type HTMLInputProps = Omit<
 
 interface InputProps extends HTMLInputProps {
     className?: string;
-    value?: string;
+    value?: string | number;
     autofocus?: boolean;
+    readonly?: boolean;
     onChange?: (value: string) => void;
 }
 
@@ -29,6 +31,7 @@ export const Input: FC<InputProps> = memo((props: InputProps) => {
         onChange,
         placeholder,
         autofocus,
+        readonly,
         ...otherProps
     } = props;
 
@@ -54,8 +57,12 @@ export const Input: FC<InputProps> = memo((props: InputProps) => {
         setIsFocused(true);
     };
 
+    const mods: Mods = {
+        [cls.readonly]: readonly,
+    };
+    
     return (
-        <div className={classNames(cls.inputWrapper, {}, [className])}>
+        <div className={classNames(cls.inputWrapper, mods, [className])}>
             {placeholder && (
                 <div className={cls.placeholder}>{`${placeholder}>`}</div>
             )}
@@ -65,6 +72,7 @@ export const Input: FC<InputProps> = memo((props: InputProps) => {
                 value={value}
                 onChange={onChangeHandler}
                 className={cls.input}
+                readOnly={readonly}
                 onFocus={onFocus}
                 onBlur={onBlur}
                 {...otherProps}

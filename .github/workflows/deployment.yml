@@ -8,7 +8,7 @@ on:
 
 env:
   SERVER_HOST: 185.228.234.156
-  SERVER_USER: ubuntu
+  SERVER_USER: root
   SERVER_PATH: /var/www/build
 
 jobs:

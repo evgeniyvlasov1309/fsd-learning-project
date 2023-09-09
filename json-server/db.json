@@ -1,38 +1,38 @@
 {
-    "posts": [
-        {
-            "id": "1",
-            "title": "json-server",
-            "userId": "1"
-        },
-        {
-            "id": "2",
-            "title": "json-server",
-            "userId": "2"
-        }
-    ],
-    "comments": [
-        {
-            "id": "1",
-            "body": "some comment",
-            "postId": "1"
-        }
-    ],
-    "users": [
-        {
-            "id": "1",
-            "username": "admin",
-            "password": "123"
-        }
-    ],
-    "profile": {
-        "first": "Evgenii",
-        "lastname": "Vlasov",
-        "age": "27",
-        "currency": "RUB",
-        "country": "Russia",
-        "city": "Tyumen",
-        "username": "admin",
-        "avatar": "https://cdn.pixabay.com/photo/2013/07/13/10/07/man-156584_1280.png"
+  "posts": [
+    {
+      "id": "1",
+      "title": "json-server",
+      "userId": "1"
+    },
+    {
+      "id": "2",
+      "title": "json-server",
+      "userId": "2"
     }
+  ],
+  "comments": [
+    {
+      "id": "1",
+      "body": "some comment",
+      "postId": "1"
+    }
+  ],
+  "users": [
+    {
+      "id": "1",
+      "username": "admin",
+      "password": "123"
+    }
+  ],
+  "profile": {
+    "first": "Eugen",
+    "lastname": "Vlasov",
+    "age": 28,
+    "currency": "EUR",
+    "country": "Armenia",
+    "city": "Tyumen",
+    "username": "Admin",
+    "avatar": "https://cdn.pixabay.com/photo/2013/07/13/10/07/man-156584_1280.png"
+  }
 }

@@ -2,5 +2,13 @@
     "title": "Profile",
     "edit": "Edit",
     "firstname": "Your name",
-    "surname": "Your surname"
+    "surname": "Your surname",
+    "error-loading-profile": "An error occurred while loading the profile",
+    "try-to-update": "Try refreshing the page",
+    "cancel": "Cancel",
+    "save": "Save",
+    "age": "Your age",
+    "city": "City",
+    "username": "Enter username",
+    "avatar": "Enter avatar link"
 }
