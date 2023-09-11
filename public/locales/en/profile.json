@@ -10,5 +10,10 @@
     "age": "Your age",
     "city": "City",
     "username": "Enter username",
-    "avatar": "Enter avatar link"
+    "avatar": "Enter avatar link",
+    "server-error": "Server error while saving",
+    "incorrect-region": "Incorrect region",
+    "firstname-surname-error": "Firstname and surname are required",
+    "no-data-error": "No data",
+    "incorrect-age": "Incorrect age"
 }
