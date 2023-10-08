@@ -3,6 +3,7 @@
   "main-menu-item": "Home",
   "about-us-menu-item": "About us",
   "profile-menu-item": "Profile",
+  "articles-menu-item": "Articles",
   "language": "English",
   "page-not-found": "Page not found",
   "page-error": "Unexpected error occured",
@@ -17,5 +18,6 @@
   "auth-form": "Authorization form",
   "incorrect-auth": "Login or password is incorrect",
   "profile-page": "Profile",
-  "logout": "Logout"
+  "logout": "Logout",
+  "article-not-found": "Article not found"
 }

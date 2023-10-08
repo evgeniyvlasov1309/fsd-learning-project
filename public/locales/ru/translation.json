@@ -3,6 +3,7 @@
   "main-menu-item": "Главная",
   "about-us-menu-item": "О сайте",
   "profile-menu-item": "Профиль",
+  "articles-menu-item": "Статьи",
   "language": "Русский",
   "page-not-found": "Страница не найдена",
   "page-error": "Произошла непредвиденная ошибка",
@@ -17,5 +18,6 @@
   "auth-form": "Форма авторизации",
   "incorrect-auth": "Неверный логин или пароль",
   "profile-page": "Профиль",
-  "logout": "Выйти"
+  "logout": "Выйти",
+  "article-not-found": "Статья не найдена"
 }
