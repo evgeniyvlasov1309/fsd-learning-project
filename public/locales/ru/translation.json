@@ -21,5 +21,7 @@
   "logout": "Выйти",
   "article-not-found": "Статья не найдена",
   "comments": "Комментарии",
-  "no-comments": "Комментарии отсутствуют"
+  "no-comments": "Комментарии отсутствуют",
+  "input-comment-text": "Введите текст комментария",
+  "create-comment-btn": "Отправить"
 }

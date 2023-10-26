@@ -21,5 +21,7 @@
   "logout": "Logout",
   "article-not-found": "Article not found",
   "comments": "Comments",
-  "no-comments": "There is no comments"
+  "no-comments": "There is no comments",
+  "input-comment-text": "Enter comment text",
+  "create-comment-btn": "Send"
 }
